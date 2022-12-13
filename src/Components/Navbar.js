@@ -12,7 +12,7 @@ export default function Navbar(props) {
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <Link className="mr-5 hover:text-gray-900" to="/commitee">First Link</Link>
+      <a className="mr-5 hover:text-gray-900" >First Link</a>
       <a className="mr-5 hover:text-gray-900">Second Link</a>
     
     </nav>

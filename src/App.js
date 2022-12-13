@@ -8,18 +8,18 @@ import Department from './Components/Department';
 import Session from './Components/Session';
 import AddSession from './Components/addSession';
 import Main from './Components/Main';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
   return (
     <>
-    {/* eef */}
+    
       <Navbar/>
      {/* <Add/>
      <Table/>  */}
@@ -29,13 +29,13 @@ function App() {
      {/* <AddSession/> */}
      <Main/>
      
-    <Router>
+    {/* <Router>
     <Routes>
     <Route exact path="/commitee" element={ <Commitee/>} />
     <Route exact path="/Deparment" element={ <Department/>} />
    
   </Routes>
-</Router>
+</Router> */}
     </>
   );
 }
