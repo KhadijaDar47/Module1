@@ -1,84 +1,109 @@
-import {
+import React from "react";
+import { Link } from "react-router-dom";
 
-    Link
-  } from "react-router-dom";
-export default function Main(props){
-    return(
+function Main() {
+  
+    return (
         <>
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-12 mx-auto">
-    <div class="flex flex-col">
-      <div class="h-1 bg-gray-200 rounded overflow-hidden">
-        <div class="w-24 h-full bg-indigo-500"></div>
-      </div>
-      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Final Year Project Management</h1>
-        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
-      </div>
-    </div>
-    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503"/>
+       
+       <section className="block relative z-1 bg-blueGray-600">
+        <div className="container mx-auto py-34">
+          <div className="justify-center flex flex-wrap">
+            <div className="w-full lg:w-12/12 px-4  -mt-24">
+              <div className="flex flex-wrap">
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Login Page
+                  </h5>
+                  {/* <Link to="/auth/login"> */}
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        // src={require("assets/img/login.jpg").default}
+                      />
+                    </div>
+                  {/* </Link> */}
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Profile Page
+                  </h5>
+                  {/* <Link to="/profile"> */}
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        // src={require("assets/img/profile.jpg").default}
+                      />
+                    </div>
+                  {/* </Link> */}
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Landing Page
+                  </h5>
+                  {/* <Link to="/landing"> */}
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        // src={require("assets/img/landing.jpg").default}
+                      />
+                    </div>
+                  {/* </Link> */}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Manage Teachers</h2>
-        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504"/>
-        </div>
-        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Manage Commitee</h2>
-        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505"/>
-        </div>
-        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Manage Session & Section</h2>
-        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-6 mx-auto">
-    <div class="flex flex-col">
-    
-    </div>
-    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503"/>
-        </div>
-        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Manage Department</h2>
-        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-    
-   
-    </div>
-  </div>
-</section>
-        </>
+      </section>
+
+
+ {/* GRID */}
+
+
+            <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-6 gap-8">
+                <div className="hover:-mt-4  h-24" >
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Login Page
+                  </h5>
+                  {/* <Link to="/auth/login"> */}
+                    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        // src={require("assets/img/login.jpg").default}
+                      />
+                    </div>
+                  {/* </Link> */}
+                </div>
+                </div>
+                
+                <div className="rounded border-gray-300  dark:border-gray-700 border-dashed border-2 h-24" />
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded border-gray-300  dark:border-gray-700 border-dashed border-2 h-24" />
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded border-gray-300  dark:border-gray-700 border-dashed border-2 h-24" />
+            </div>
+ 
+
+
+
+
+
+
+      </>
     );
 }
+
+
+
+       
+
+export default Main;

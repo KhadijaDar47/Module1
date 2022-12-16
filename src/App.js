@@ -8,6 +8,7 @@ import Department from './Components/Department';
 import Session from './Components/Session';
 import AddSession from './Components/addSession';
 import Main from './Components/Main';
+import Sidenav from './Components/sidebar';
 // import {
 //   BrowserRouter as Router,
 //   Routes,
@@ -20,14 +21,23 @@ function App() {
   return (
     <>
     
-      <Navbar/>
-     {/* <Add/>
-     <Table/>  */}
-     {/* <Commitee/> */}
+   
+ 
+     <div className='bg-grey-100'>
+     <Navbar/>
+     <Commitee/>
+  
+     </div>
+   
+     {/* <Add/> */}
+     {/* <Table/> */}
+
+     {/* <Table/>  */}
+     
      {/* <Department/> */}
      {/* <Session/> */}
      {/* <AddSession/> */}
-     <Main/>
+     {/* <Main/> */}
      
     {/* <Router>
     <Routes>
@@ -36,7 +46,7 @@ function App() {
    
   </Routes>
 </Router> */}
-    </>
+   </>
   );
 }
 

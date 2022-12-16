@@ -1,60 +1,67 @@
-export default function AddSession(props){
-    return(
-        <>
-        <section class="text-gray-600 body-font relative">
-  <div class="container px-5 py-9 mx-auto">
-    <div class="flex flex-col text-center w-full mb-12">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Add New Session</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
-    </div>
-    <div class="lg:w-1/2 md:w-2/3 mx-auto">
-      <div class="flex flex-wrap -m-2">
-        <div class="p-2 w-1/2">
-          <div class="relative">
-            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-            <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
-          </div>
-        </div>
-        <div class="p-2 w-1/2">
-          <div class="relative">
-            <label for="Department" class="leading-7 text-sm text-gray-600">Department</label>
-            <div class="flex ml-1 items-center">
-            <div class="relative">
-              <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-60">
-                <option>SM</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-              </select>
-              <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
+import React, { useState } from "react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
+
+import AddMembers from "../Components/AddMemebers"
+
+
+
+
+export default function AddSession() {
+  const [AddCommitee, useSetAddCommitee] = useState(false);
+  
+  const OnAddBtnClick = event => {
+    useSetAddCommitee(current => !current);
+  }
+  return (
+     <>
+     {AddCommitee? <AddMembers /> : 
+    <Card className="w-100">
+    
+      <CardBody className="">
+
+        <div>
+            <div className="w-full bg-white p-10">
+                <div className="md:flex items-center border-b pb-6 border-gray-200">
+                <h1 tabIndex={0} role="heading" aria-label="profile information" className="focus:outline-none text-3xl font-bold text-gray-800 mt-12">
+                   Create Commitee
+                </h1>
+                </div>
+                <div className="mt-8 md:flex justify-start">
+                    <div className="flex flex-col w-64 ">
+                        <label className="mb-3 text-sm leading-none text-gray-800">Commitee Title</label>
+                        <input  tabIndex={0} aria-label="Title of the commitee" className="w-64 bg-gray-100 text-sm font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"  />
+                    </div>
+                    <div className="flex flex-col md:ml-12 md:mt-0 mt-8">
+                        <label className="mb-3 text-sm leading-none text-gray-800">Discription</label>
+                        <input  tabIndex={0} aria-label="Discription of the commitee" className="w-64 bg-gray-100 text-sm font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"  />
+                    </div>
+                  
+                </div>     
+                <button role="button" aria-label="Next step" className="flex items-center justify-center py-4 px-7 focus:outline-none bg-white border rounded border-gray-400 mt-7 md:mt-14 hover:bg-gray-100 
+                 focus:ring-2 focus:ring-offset-2 focus:ring-gray-700" onClick={OnAddBtnClick}>
+                    <span className="text-sm font-medium text-center text-gray-800 capitalize">Done</span>
+                    <svg className="mt-1 ml-3" width={12} height={8} viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.01 3H0V5H8.01V8L12 4L8.01 0V3Z" fill="#242731" />
+                    </svg>
+                </button>
             </div>
-          </div>
-        
-            {/* <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/> */}
-          </div>
+            <style dangerouslySetInnerHTML={{ __html: "\n          .checkbox:checked + .check-icon {\n              display: flex;\n          }\n      " }} />
         </div>
-        <div class="p-2 w-full">
-          <div class="relative">
-            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
-            <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-          </div>
-        </div>
-        <div class="p-2 w-full">
-          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Create Session</button>
-       
-        </div>
+
+
+      </CardBody>
+      <CardFooter divider className="flex items-center  py-3">
+        <Typography variant="small"></Typography>
       
-      </div>
-    </div>
-  </div>
-</section>
-        </>
-    );
+      </CardFooter>
+    </Card>}
+    </>
+  );
 }
-
-
- 
