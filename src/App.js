@@ -9,43 +9,25 @@ import Session from './Components/Session';
 import AddSession from './Components/addSession';
 import Main from './Components/Main';
 import Sidenav from './Components/sidebar';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import { BrowserRouter, Routes , Route,Link} from "react-router-dom";
+
 
 
 function App() {
   return (
     <>
-    
    
- 
-     <div className='bg-grey-100'>
-     <Navbar/>
-     <Commitee/>
-  
-     </div>
-   
-     {/* <Add/> */}
-     {/* <Table/> */}
-
-     {/* <Table/>  */}
-     
-     {/* <Department/> */}
-     {/* <Session/> */}
-     {/* <AddSession/> */}
-     {/* <Main/> */}
-     
-    {/* <Router>
+    <BrowserRouter>
+    <Navbar/>
     <Routes>
-    <Route exact path="/commitee" element={ <Commitee/>} />
-    <Route exact path="/Deparment" element={ <Department/>} />
+         <Route path="/home" element={<div>home page</div>} />
+         <Route path="/About" element={<div>About page</div>} />
+         {/* <Route path="/AddTeacher" element={<div>deed</div>} /> */}
+    </Routes>
+    <Commitee/>
+    </BrowserRouter>
+    {/* <Link to="/About" > About</Link> */}
    
-  </Routes>
-</Router> */}
    </>
   );
 }

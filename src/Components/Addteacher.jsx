@@ -3,7 +3,6 @@ import { Radio } from "@material-tailwind/react";
 import React from "react";
 
 function TeacherAdd(props) {
-
     const onAddBtnClick = event => {
         props.changeToDegisnation(false)
     };
@@ -44,7 +43,6 @@ function TeacherAdd(props) {
                     </div>
 
                 </div>
-
                 <div className=" pb-3 flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
                     <button className="bg-white border-indigo-700 rounded hover:bg-gray-50 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-indigo-700 border lg:max-w-[95px]  w-full " onClick={onAddBtnClick} >
                         Next  </button>

@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { BrowserRouter, Routes , Route,Link} from "react-router-dom";
 
 export default function Navbar() {
 
@@ -15,7 +16,9 @@ export default function Navbar() {
                         <h1 className=" font-normal text-2xl leading-6 text-gray-800">FYP Manager</h1>
                     </div>
                     <div className="hidden sm:flex flex-row space-x-4">
+                        <Link to="/home" > 
                         <button className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 duration-150 justify-center items-center">Log out</button>
+                        </Link>
                     </div>
                     {/* Burger Icon */}
                     <div id="bgIcon" onClick={()=>setshow(!show)} className={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}>

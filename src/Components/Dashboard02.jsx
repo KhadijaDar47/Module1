@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  Button
-} from "@material-tailwind/react";
-
 import Icon from '../images/icon-01.svg';
 
 function DashboardCard02(props) {
   const onAddBtnClick = event => {
-
     props.changeValueSection(false)
-
   };
 
   return (
@@ -22,8 +16,6 @@ function DashboardCard02(props) {
           <header className="flex justify-between items-start mb-2">
             {/* Icon */}
             <img src={Icon} width="32" height="32" alt="Icon 01" />
-            {/* Menu button */}
-
           </header>
           <h2 className="text-lg font-semibold text-slate-800 mb-2">Total Section</h2>
           <div className="text-3xl font-semibold text-slate-400 uppercase mb-1">12</div>
@@ -35,17 +27,10 @@ function DashboardCard02(props) {
                 View Section
               </button>
             </div>
-
-
           </div>
         </div>
-
       </div>
-
     </>
-
-
-
   );
 }
 

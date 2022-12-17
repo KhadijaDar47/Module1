@@ -15,16 +15,16 @@ function Commitee() {
     return (
         <>
 
-            <div className="flex flex-no-wrap bg-grey-100">
+            <div className="flex flex-no-wrap ">
                 <Sidenav />
                 <div className="container mx-auto py-1 h-64 md:w-4/5 w-11/12 px-6">
                     <WelcomeBanner />
                     <div className="w-full h-full rounded ">
-                        {/* <Add/> */}
+                        <Add/>
                         {/* <AddSession /> */}
                         {/* <Com/> */}
                         {/* <Session/> */}
-                        <Department/>
+                        {/* <Department/> */}
                         {/* <Table/> */}
                         {/* <Main/> */}
 

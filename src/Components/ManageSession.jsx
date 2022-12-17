@@ -1,10 +1,4 @@
-import {
-    Card,
-    CardBody,
-    Button
-  } from "@material-tailwind/react";
-
-   
+import { Card, CardBody} from "@material-tailwind/react";
   export default function ManageSession(props) {
     return (
      <div className="pt-12">

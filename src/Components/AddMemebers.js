@@ -1,26 +1,14 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button
-} from "@material-tailwind/react";
+import { Card, CardBody, CardFooter, } from "@material-tailwind/react";
 import ListMember from "../Components/ListMembers"
 import React, { useState, useRef } from "react";
-
-
-
-
 export default function AddMemebers() {
   const inputRef = useRef(null);
   const list = [];
   const [ShowMember, SetShowMembers] = useState(false)
   const AddtoList = event => {
     list.push(inputRef.current.value);
-    console.log("this", list)
+    // console.log("this", list)
   }
-
   const ShowList = event => {
     SetShowMembers(current => !current);
   }
@@ -41,7 +29,6 @@ export default function AddMemebers() {
                   <input ref={inputRef} className="w-64 bg-gray-100 text-sm font-medium leading-none text-gray-800 p-3 border rounded border-gray-200" />
                 </div>
               </div>
-
               <div className="flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
                 <button className="bg-white border-indigo-700 rounded hover:bg-gray-50 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-indigo-700 border lg:max-w-[95px]  w-full " onClick={AddtoList} >
                   Add  </button>
@@ -49,7 +36,6 @@ export default function AddMemebers() {
                   View
                 </button>
               </div>
-
             </div>
           </div>
         </CardBody>
