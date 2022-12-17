@@ -1,8 +1,4 @@
-import React from "react";
-import { Button } from "@material-tailwind/react";
-import { Radio } from "@material-tailwind/react";
-import { Select, Option } from "@material-tailwind/react";
-import Typography from '@mui/material/Typography';
+import {React,useState} from "react";
 import Addteacher from "./Addteacher";
 import {
     Card,
@@ -10,37 +6,31 @@ import {
     CardBody,
     CardFooter,
   } from "@material-tailwind/react";
+import AddDesignation from "./Adddesignation";
+
+
 
 function MyApp() {
-  
+const [flag, setFlag] = useState(false)
+const changeToDegisnation = (value) => {
+  setFlag(current => !current);  
+  console.log(flag)   
+};
     return (
-        <>
-           
-    
-    <Card className="w-100">
-  
-  <CardBody className="">
-
+       <>
+    <Card className="w-100"> 
+    <CardBody className="">
     <div>
         <div className="w-full bg-white ">
-            <div className="md:flex text-center border-b pb-3 border-gray-200 pt-1 px-6 ">
-            <h1 className="focus:outline-none text-2xl font-bold text-gray-800 mt-3 flex text-center">
-              Add Teacher
-            </h1>
-            </div>
-          
-        </div>
-        
+          {flag?<AddDesignation/>:<Addteacher changeToDegisnation={changeToDegisnation}/>}
+        {/* <Addteacher changeToDegisnation={changeToDegisnation}/>
+        <AddDesignation/> */}
+        </div> 
     </div>
-    <Addteacher/>
-      
-
+   
   </CardBody>
 </Card>
-
-    </>
-       
-
+  </>
     );
 }
 

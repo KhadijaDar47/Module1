@@ -10,9 +10,7 @@ import {
     return (
      <div className="pt-12">
       <Card className="w-100">
-    
-    <CardBody className="">
-
+      <CardBody className="">
       <div>
           <div className="w-full bg-white ">
               <div className="md:flex text-center border-b pb-3 border-gray-200 pt-1 px-6 ">
@@ -20,7 +18,6 @@ import {
                  Create Section
               </h1>
               </div>
-    
             <div className="flex items-center justify-center" >
                 <div class="xl:w-10/12 w-full px-1">
                     <div class="xl:px-1">
@@ -42,21 +39,21 @@ import {
                                         <input type="name" tabindex="0" class="w-full p-3 mt-3 bg-gray-100 border rounded border-gray-200 focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" aria-labelledby="lastName" placeholder="A" />
                                     </div>
                                 </div>
-                           
                             </div>
                         </div>
                      
                     </div>
                 </div>
             </div>    
-            <div className="px-12">
-            <Button color="green" fullWidth>Manage Section</Button>
-            </div>
-          </div>
-          
+            <div className="px-12 pb-12">
+            <div className="flex flex-col flex-wrap items-center justify-center w-full px-20 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
+        <button className="bg-indigo-700 rounded hover:bg-indigo-600 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-white lg:max-w-full w-full ">
+          Add Section
+        </button>
       </div>
-
-
+            </div>
+          </div>      
+      </div>
     </CardBody>
   </Card>
      </div>

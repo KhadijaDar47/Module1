@@ -1,46 +1,68 @@
 import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-  } from "@material-tailwind/react";
-   
-  export default function addMemebers() {
-    return (
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button
+} from "@material-tailwind/react";
+import ListMember from "../Components/ListMembers"
+import React, { useState, useRef } from "react";
+
+
+
+
+export default function AddMemebers() {
+  const inputRef = useRef(null);
+  const list = [];
+  const [ShowMember, SetShowMembers] = useState(false)
+  const AddtoList = event => {
+    list.push(inputRef.current.value);
+    console.log("this", list)
+  }
+
+  const ShowList = event => {
+    SetShowMembers(current => !current);
+  }
+  return (
+    <>
       <Card className="w-100">
-      
         <CardBody className="">
-  
           <div>
-              <div className="w-full bg-white p-10">
-                  <div className="md:flex items-center border-b pb-6 border-gray-200">
-                  <h1 tabIndex={0} role="heading" aria-label="profile information" className="focus:outline-none text-3xl font-bold text-gray-800 mt-12">
-                     Add Commitee Members
-                  </h1>
-                  </div>
-                  <div className="mt-8 md:flex justify-start">
-                      <div className="flex flex-col w-64 ">
-                          <label className="mb-3 text-sm leading-none text-gray-800">Member Name</label>
-                          <input  tabIndex={0} aria-label="Title of the commitee" className="w-64 bg-gray-100 text-sm font-medium leading-none text-gray-800 p-3 border rounded border-gray-200"  />
-                      </div>
-                  </div>     
-                  <button role="button" aria-label="Next step" className="flex items-center justify-center py-4 px-7 focus:outline-none bg-white border rounded border-gray-400 mt-7 md:mt-14 hover:bg-gray-100  focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
-                      <span className="text-sm font-medium text-center text-gray-800 capitalize">Next Member</span>
-                      <svg className="mt-1 ml-3" width={12} height={8} viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8.01 3H0V5H8.01V8L12 4L8.01 0V3Z" fill="#242731" />
-                      </svg>
-                  </button>
+            <div className="w-full bg-white px-10">
+              <div className="md:flex items-center border-b pb-6 border-gray-200">
+                <h1 className="focus:outline-none text-3xl font-bold text-gray-800 mt-2">
+                  Add Commitee Members
+                </h1>
               </div>
-              <style dangerouslySetInnerHTML={{ __html: "\n          .checkbox:checked + .check-icon {\n              display: flex;\n          }\n      " }} />
+              <div className="mt-8 md:flex justify-start">
+                <div className="flex flex-col w-64 ">
+                  <label className="mb-3 text-sm leading-none text-gray-800">Member Name</label>
+                  <input ref={inputRef} className="w-64 bg-gray-100 text-sm font-medium leading-none text-gray-800 p-3 border rounded border-gray-200" />
+                </div>
+              </div>
+
+              <div className="flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
+                <button className="bg-white border-indigo-700 rounded hover:bg-gray-50 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-indigo-700 border lg:max-w-[95px]  w-full " onClick={AddtoList} >
+                  Add  </button>
+                <button className="bg-indigo-700 rounded hover:bg-indigo-600 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-white lg:max-w-[144px] w-full " onClick={ShowList}>
+                  View
+                </button>
+              </div>
+
+            </div>
           </div>
-  
-  
         </CardBody>
-        <CardFooter divider className="flex items-center  py-3">
-          {/* <Typography variant="small">$899/night</Typography>
-         */}
+        <CardFooter className="flex items-center  py-3">
+
         </CardFooter>
       </Card>
-    );
-  }
+
+
+      {/* {ShowMember? <ListMember Mlist={list}/> :null} */}
+
+
+    </>
+
+  );
+}
