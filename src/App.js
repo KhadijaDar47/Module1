@@ -1,17 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Navbar from './Components/Navbar.js';
-import Add from './Components/Add';
-import Table from './Components/Table';
-import Commitee from './Components/Commitee';
-import Department from './Components/Department';
-import Session from './Components/Session';
-import AddSession from './Components/addSession';
-import Main from './Components/Main';
-import Sidenav from './Components/sidebar';
-import { BrowserRouter, Routes , Route,Link} from "react-router-dom";
-
-
+import Navbar from './Components/Navbar';
+import Layout from './Components/Utils/Layout';
+import Cards from './Components/Utils/Cards';
+import { BrowserRouter, Routes , Route} from "react-router-dom";
 
 function App() {
   return (
@@ -19,14 +11,15 @@ function App() {
    
     <BrowserRouter>
     <Navbar/>
+    
     <Routes>
-         <Route path="/home" element={<div>home page</div>} />
-         <Route path="/About" element={<div>About page</div>} />
-         {/* <Route path="/AddTeacher" element={<div>deed</div>} /> */}
+         <Route path="/" element={<Cards/>} />
+         <Route path="/Teachers" element={<Layout text={"Teachers"}/>}/>
+         <Route path="/Department" element={<Layout text={"Department"}/>}/>
+         <Route path="/Section-Session" element={<Layout text={"Section"}/>} />
+         <Route path="/Commitee" element={<Layout text={"Commitee"}/>} />
     </Routes>
-    <Commitee/>
     </BrowserRouter>
-    {/* <Link to="/About" > About</Link> */}
    
    </>
   );

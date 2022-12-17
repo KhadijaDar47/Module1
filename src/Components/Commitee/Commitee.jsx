@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Card, CardBody, CardFooter} from "@material-tailwind/react";
-import AddMembers from "../Components/AddMemebers"
+import AddMembers from "./AddMemebers"
 
-export default function AddSession() {
+export default function Commitee() {
   const [AddCommitee, useSetAddCommitee] = useState(false);
   const OnAddBtnClick = event => {
     useSetAddCommitee(current => !current);

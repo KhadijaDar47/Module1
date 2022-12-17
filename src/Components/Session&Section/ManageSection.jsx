@@ -1,10 +1,4 @@
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Button
-  } from "@material-tailwind/react";
+import {Card,CardBody } from "@material-tailwind/react";
    
   export default function ManageSection() {
     return (

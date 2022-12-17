@@ -1,13 +1,5 @@
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import Box from "@mui/material/Box";
-import Commitee from "./Commitee";
-const buttons = [
-  <Button key="one">One</Button>,
-  <Button key="two">Two</Button>,
-  <Button key="three">Three</Button>,
-];
+import React from "react";
+
 
 function SibeBar() {
   // const [show, setShow] = useState(false);
