@@ -7,23 +7,26 @@ export default function Commitee(props) {
 
   const [flag, setFlag] = useState(false)
   const [flags, setFlags] = useState(false)
-    const changeValue = (value) => {
+  const changeToSection = (value) => {
     setFlags(false)
     setFlag(current => !current);
   };
-  const changeValueSection = (value) => {
+  const changeToSession = (value) => {
     setFlag(false)
     setFlags(current => !current);
   };
+
   return (
 
     <>
       <div className="px-2 grid grid-cols-12 gap-12">
-        <Stats1 changeValue={changeValue} />
-        <Stats2 changeValueSection={changeValueSection} />
+        <Stats1 changeToSection={changeToSection} />
+        <Stats2  changeToSession={changeToSession}/>
       </div>
-      {flag ? <ManageSession /> : null}
-      {flags ? <ManageSection /> : null}
+
+     
+      {flags ? <ManageSession /> : null}
+      {flag ? <ManageSection /> : null}
 
     </>
 

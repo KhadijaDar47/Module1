@@ -1,10 +1,10 @@
 import React from 'react';
 import Icon from '../../images/icon-01.svg';
 
-function DashboardCard02(props) {
+function Stats1(props) {
   const onAddBtnClick = event => {
-    props.changeValueSection(false)
-  };
+    props.changeToSection(false);
+  }
 
   return (
     <>
@@ -34,5 +34,5 @@ function DashboardCard02(props) {
   );
 }
 
-export default DashboardCard02;
+export default Stats1;
 

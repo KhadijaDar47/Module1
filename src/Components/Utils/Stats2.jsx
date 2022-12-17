@@ -3,7 +3,7 @@ import Icon from '../../images/icon-01.svg';
 
 function DashboardCard01(props) {
     const onAddBtnClick = event => {
-       props.changeValue(false)      
+       props.changeToSession(false)      
       };
   return (
     <>
